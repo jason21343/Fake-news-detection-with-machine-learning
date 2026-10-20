@@ -62,37 +62,9 @@ Fake news on digital platforms poses significant societal risks, including influ
 | Linear SVM (Char TF-IDF)                   | 0.89     | 0.90     | 0.9651  |
 | Random Forest (Word TF-IDF)                | 0.89     | 0.89     | 0.9535  |
 | Logistic Regression (Sentence Embeddings)  | 0.85     | 0.85     | 0.9327  |
-| DistilBERT                                 | 0.91     | 0.91     | 0.9804  |
-| **Stacking Ensemble**                      | **0.92** | **0.92** | **0.9753** |
+| DistilBERT                                 | 0.91     | 0.91     | **0.9804** |
+| **Stacking Ensemble**                      | **0.92** | **0.92** | 0.9753 |
 
 - DistilBERT was the strongest individual model.
 - The stacking ensemble achieved the best overall F1 and accuracy by combining complementary signals.
 
-## Grok API Experiment
-
-An exploratory integration of the Grok API (with web search) was tested as an external “truth score” feature.
-
-- Strict prompt (score only): F1 ≈ 0.59
-- Relaxed prompt (allowed reasoning): F1 ≈ 0.66
-- Sample size limited (N=38) due to credit constraints
-- Ultimately **excluded** from the final ensemble due to unreliable performance
-
-## Limitations & Future Work
-
-- Models primarily rely on linguistic/stylistic cues rather than external fact verification
-- Binary classification does not handle satire, parody, or humor
-- Potential dataset biases require fairness audits
-- Future directions: better external knowledge integration, multi-class satire detection, and improved LLM prompting strategies
-
-## AI Use Declaration
-
-- Code generated with Google Gemini
-- Report assisted with Microsoft Copilot
-
-## References
-
-Key references include works on BERT (Devlin et al., 2019), stacked generalization (Wolpert, 1992), and the Kaggle project that inspired the methodology (Kharl, 2025). Full reference list is available in the report.
-
----
-
-*This README summarizes the AMA4951 Capstone Project report.*
